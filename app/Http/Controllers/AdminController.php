@@ -269,6 +269,7 @@ class AdminController extends Controller
             echo "Chưa Có File";
         }
         $product->new = $request->new;
+        $product->status = $request->status;
         $product->save();
         return redirect('admin/Product/sua/' . $id)->with('thongbao', 'Sửa Thành Công');
     }

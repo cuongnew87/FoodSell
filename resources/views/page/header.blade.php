@@ -46,7 +46,7 @@
                                 </a>
                                 @else
                                 <a type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                    <i class="fa fa-shopping-cart"></i>Giỏ hàng ({{Session::get('count')}}:Món)
+                                    <i class="fa fa-shopping-cart"></i>Giỏ hàng ({{Session::get('count')}}Món)
                                     <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
@@ -104,6 +104,9 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="thong-tin-tai-khoan/{{Session::get('id_user')}}"><i class="fa fa-user"></i>Tài Khoản Của Tôi</a></li>
+                                    @if(Session::get('role_id') == 0)
+                                        <li><a href="admin/Product/danhsach"><i class="fa fa-star"></i>Trang Admin</a></li>
+                                    @endif
                                     <li><a href="lich-su-mua-hang/{{Session::get('id_user')}}"><i class="fa fa-usd"></i>Lịch Sử Mua Hàng</a></li>
                                     <li><a href="dang-xuat"><i class=" fa fa-sign-out "></i>Đăng Xuất</a></li>
                                 </ul>

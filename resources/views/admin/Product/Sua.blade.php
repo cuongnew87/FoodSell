@@ -80,6 +80,23 @@
                             >Không
                         </label>
                     </div>
+                    <div class="form-group">
+                        <label>Trạng thái ?</label>
+                        <label class="radio-inline">
+                            <input name="status" value="1" checked="" type="radio"
+                            @if($product->status == 1)
+                            {{"checked"}}
+                            @endif
+                            >Còn hàng
+                        </label>
+                        <label class="radio-inline">
+                            <input name="status" value="0" type="radio"
+                            @if($product->status == 0)
+                            {{"checked"}}
+                            @endif
+                            >Hết hàng
+                        </label>
+                    </div>
                     <button type="submit" class="btn btn-default">Sửa</button>
                     <button type="reset" class="btn btn-default">Làm Mới</button>
                 <form>

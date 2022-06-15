@@ -1,0 +1,2 @@
+Chào, {{ $name }}
+Hãy truy 
