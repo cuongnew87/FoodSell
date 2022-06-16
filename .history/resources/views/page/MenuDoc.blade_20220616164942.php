@@ -1,30 +1,3 @@
-<style>
-    .range-wrap {
-  position: relative;
-  margin: 0 auto 3rem;
-}
-.range {
-  width: 100%;
-}
-.bubble {
-  background: red;
-  color: white;
-  padding: 4px 12px;
-  position: absolute;
-  border-radius: 4px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.bubble::after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: red;
-  top: -1px;
-  left: 50%;
-}
-</style>
 <div class="col-sm-3">
     <div class="left-sidebar">
         <h2>Thực Đơn</h2>
@@ -54,13 +27,8 @@
         <div class="price-range"><!--price-range-->
             <h2>Lọc Theo Giá</h2>
             <div class="well text-center">
-                {{-- <input type="text" class="span2" value="" data-slider-min="{{$min_price}}" data-slider-max="{{$max_price}}" data-slider-step="1000" data-slider-value="{{$max_price}}" id="sl2"><br />
-                <b class="pull-left">{{$min_price}} đ</b> <b class="pull-right">{{$max_price}} đ</b>--}}
-                <div class="range-wrap">
-                    <input type="range" class="range" min="{{$min_price}}" max="{{$max_price}}" step="1000" value="{{$max_price}}">
-                    <output class="bubble"></output>
-                </div>
-                <b class="pull-left" id="pull-min" value="{{$min_price}}">{{$min_price}} đ</b> <b class="pull-right" id="pull-max" value="{{$max_price}}">{{$max_price}} đ</b>
+                <input type="text" class="span2" value="" data-slider-min="{{$min_price}}" data-slider-max="{{$max_price}}" data-slider-step="1000" data-slider-value="{{$max_price}}" id="sl2" onchange="updateSlider(this.value)"><br />
+                <b class="pull-left">{{$min_price}} đ</b> <b class="pull-right">{{$max_price}} đ</b>      
             </div>
         </div><!--/price-range-->
 

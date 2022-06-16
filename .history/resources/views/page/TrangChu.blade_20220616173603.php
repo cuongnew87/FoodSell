@@ -11,7 +11,7 @@
                         <div class="row">
                             <?php $index = 1; ?>
                             @foreach ($product as $product)
-                                <div class="col-sm-4 col-6" style="height:422.84px" id="product-<?php echo $index; ?>">
+                                <div class="col-sm-4 col-6" style="height:422.84px id="product-<?php echo $index; ?>">
                                     <div class="product-image-wrapper">
                                         <div class="single-products">
                                             <div class="productinfo text-center">

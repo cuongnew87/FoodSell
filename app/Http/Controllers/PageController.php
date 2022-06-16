@@ -37,6 +37,12 @@ class PageController extends Controller
         view()->share('category', $category);
         view()->share('productRemain', $productRemain);
         view()->share('productRemain1', $productRemain1);
+        
+        $min_price = Product::min('unit_price');
+        view()->share('min_price', $min_price);
+
+        $max_price = Product::max('unit_price');
+        view()->share('max_price', $max_price);
     }
     public function getTrangChu()
     {
@@ -312,10 +318,10 @@ class PageController extends Controller
             ['email' => $request->email, 'token' => $token, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]
         );
 
-        $data = array('token'=>$token);
+        $data = array('token'=>$token, 'email' => $request->email);
    
-        Mail::send(['text'=>'mail'], $data, function($message) {
-           $message->to('cuongnew37@gmail.com', 'Tutorials Point')->subject
+        Mail::send(['text'=>'mail'], $data, function($message) use($request) {
+           $message->to($request->email, 'Tutorials Point')->subject
               ('Laravel Basic Testing Mail');
            $message->from('managepayment95@gmail.com','Hup');
         });

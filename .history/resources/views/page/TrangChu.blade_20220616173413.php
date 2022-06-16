@@ -8,10 +8,10 @@
                 <div class="col-sm-9 padding-right">
                     <div class="features_items">
                         <h2 class="title text-center">Sản Phẩm Mua Nhiều</h2>
-                        <div class="row">
+                        <div class="row" sty>
                             <?php $index = 1; ?>
                             @foreach ($product as $product)
-                                <div class="col-sm-4 col-6" style="height:422.84px" id="product-<?php echo $index; ?>">
+                                <div class="col-sm-4 col-6" id="product-<?php echo $index; ?>">
                                     <div class="product-image-wrapper">
                                         <div class="single-products">
                                             <div class="productinfo text-center">

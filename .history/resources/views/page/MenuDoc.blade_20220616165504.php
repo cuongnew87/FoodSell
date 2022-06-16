@@ -57,10 +57,10 @@
                 {{-- <input type="text" class="span2" value="" data-slider-min="{{$min_price}}" data-slider-max="{{$max_price}}" data-slider-step="1000" data-slider-value="{{$max_price}}" id="sl2"><br />
                 <b class="pull-left">{{$min_price}} đ</b> <b class="pull-right">{{$max_price}} đ</b>--}}
                 <div class="range-wrap">
-                    <input type="range" class="range" min="{{$min_price}}" max="{{$max_price}}" step="1000" value="{{$max_price}}">
+                    <input type="range" class="range">
                     <output class="bubble"></output>
                 </div>
-                <b class="pull-left" id="pull-min" value="{{$min_price}}">{{$min_price}} đ</b> <b class="pull-right" id="pull-max" value="{{$max_price}}">{{$max_price}} đ</b>
+                <b class="pull-left" id="pull-min" value="{{$min_price}}">{{$min_price}} đ</b> <b class="pull-right" id="pull-min" value="{{$max_price}}">{{$max_price}} đ</b>
             </div>
         </div><!--/price-range-->
 

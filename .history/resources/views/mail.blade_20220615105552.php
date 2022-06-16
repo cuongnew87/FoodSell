@@ -1,2 +1,0 @@
-Chào, {{ $name }}
-Hãy truy 

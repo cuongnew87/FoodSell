@@ -11,7 +11,8 @@
                         <div class="row">
                             <?php $index = 1; ?>
                             @foreach ($product as $product)
-                                <div class="col-sm-4 col-6" style="height:422.84px" id="product-<?php echo $index; ?>">
+                                <div class="col-sm-4 col-6" id="product-<?php echo $index; ?>">
+                                    <?php $index++; ?>
                                     <div class="product-image-wrapper">
                                         <div class="single-products">
                                             <div class="productinfo text-center">
@@ -62,7 +63,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <?php $index++; ?>
                             @endforeach
                         </div>
                     </div>
@@ -241,15 +241,15 @@
                 // Sorta magic numbers based on size of the native UI thumb
                 bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
 
-                console.log(val);
                 for (var i = 1; i <= 6; i++) {
-                    if(document.getElementById('price-' + i).value - val > 0){
-                        document.getElementById('product-' + i).style.display = "none";
-                        console.log(document.getElementById('price-' + i).value);
-                        console.log(document.getElementById('price-' + i).value - val);
-                    } else{
-                        document.getElementById('product-' + i).style.display = "block";
-                    }
+                    // if(document.getElementById('product-' + i).value > val){
+                    //     console.log('none');
+                    //     document.getElementById('product-' + i).style.display = "none";
+                    // } else{
+                    //     console.log('block');
+                    //     document.getElementById('product-' + i).style.display = "block";
+                    // }
+                    console.log(document.getElementById('price-' + i));
                 }
             }
         </script>
